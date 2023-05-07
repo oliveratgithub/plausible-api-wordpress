@@ -7,8 +7,9 @@ _NOTE_: only the `/stats/aggregate` API endpoint is implemented so far.
 
 ## Usage
 
-* Place the `/plausible-api`-directory to your (Child-)Theme folder.
-* Require the main Plugin file to get access to the Plausible Analytics API endpoints within your Theme.
+* Place the `/plausible-api`-directory inside your WP (Child-)Theme folder.
+* Insert [your Plausible API Token](https://plausible.io/settings) to the const `PLAUSIBLE_API_APITOKEN` within `plausible-api.php`
+* Require the main Plugin file to get access to the Plausible Analytics API endpoints within your Theme (see examples)
 
 ### Examples:
 
