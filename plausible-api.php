@@ -6,7 +6,7 @@
  * Version:				1.0.0
  * Requires at least:	6.2
  * Requires PHP:		8.0
- * Author:				Oliver Raduner
+ * Author:				oliveratgithub
  * Author URI:			https://github.com/oliveratgithub/
  * Text Domain:			plausible-api
  * Domain Path:			/languages
