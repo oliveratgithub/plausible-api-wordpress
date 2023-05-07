@@ -10,11 +10,14 @@ _NOTE_: only the `/stats/aggregate` API endpoint is implemented so far.
 * Place the `/plausible-api`-directory to your (Child-)Theme folder.
 * Require the main Plugin file to get access to the Plausible Analytics API endpoints within your Theme.
 
-Examples:
+### Examples:
 
-### Number of visitors to a specific page
+#### Number of visitors to a specific page
 
 ```php
+<?php
+#...
+
 if ( false !== stream_resolve_include_path( get_stylesheet_directory() . '/assets/plausible-api/plausible-api.php' ) )
 {
 	// Include the plausible-api Plugin
@@ -25,15 +28,17 @@ if ( false !== stream_resolve_include_path( get_stylesheet_directory() . '/asset
 
 	// Query the Plausible Stats API
 	$pageviews = $PlausibleStatsAPI->aggregate(
-												 ['pageviews'] // metric(s)
-												,'custom' // date period
-												,get_the_date('Y-m-d', $post_id) // date period - start date
-												,date('Y-m-d') // date period - end date
-												,false // compare to previous period
-												,['page' => $pagepath] // filter criteria
-											);
+							 ['pageviews'] // metric(s)
+							,'custom' // date period
+							,get_the_date('Y-m-d', $post_id) // date period - start date
+							,date('Y-m-d') // date period - end date
+							,false // compare to previous period
+							,['page' => $pagepath] // filter criteria
+						);
 
 	// Show the API request results to the given $pagepath
 	echo $pageviews;
 }
+
+#...
 ```
